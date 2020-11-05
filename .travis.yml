@@ -11,7 +11,7 @@ jdk:
 before_install:
   # Install SDK license so Android Gradle plugin can install deps.
   #- yes | sdkmanager "platforms;android-28"
-  - sdkmanager --update
+  - yes | sdkmanager --update
 
 script:
   - ./gradlew build --no-daemon
