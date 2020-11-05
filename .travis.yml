@@ -11,8 +11,10 @@ jdk:
 before_install:
   # Install SDK license so Android Gradle plugin can install deps.
   #- mkdir "$ANDROID_HOME/licenses" || true
-  - ls "$ANDROID_HOME"
-  - yes | "$ANDROID_HOME/tools/bin/sdkmanager" --licenses
+  - ls "$ANDROID_HOME/tools/bin"
+  #- yes | "$ANDROID_HOME/tools/bin/sdkmanager" --licenses
+  - yes | sdkmanager "platforms;android-28"
+  - sdkmanager --version
   #- echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
 
 script:
