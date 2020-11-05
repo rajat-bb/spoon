@@ -14,7 +14,7 @@ before_install:
   - ls "$ANDROID_HOME/tools/bin"
   #- yes | "$ANDROID_HOME/tools/bin/sdkmanager" --licenses
   - yes | sdkmanager "platforms;android-28"
-  - sdkmanager --version
+  #- sdkmanager --version
   #- echo "d56f5187479451eabf01fb78af6dfcb131a6481e" > "$ANDROID_HOME/licenses/android-sdk-license"
 
 script:
